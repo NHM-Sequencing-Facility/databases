@@ -23,6 +23,7 @@ This repository contains information pertaining to the communally-available data
 | Database | Timestamp | Path | Size |
 | --- | --- | --- | --- |
 | Kraken2 Standard | 14-05-2026 | /hpc/groups/database/kraken/k2_standard_{release} | 97.3GB |
+| Kraken2 plusPF | 14-05-2026 | /hpc/groups/database/kraken/k2_pluspf_{release} | **TBC** |
 
 
 ### [NCBI Taxonomy 'dump'](https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/)
@@ -46,6 +47,7 @@ This repository contains information pertaining to the communally-available data
 - **RefSeq representative Eukaryote Genomes**: Contains Reference genomes selected from the NCBI Refseq Genomes database. As a result, the genomes in this database are among the best quality genomes available at NCBI. It is also constructed with minimum redundancy in genome representation. For the eukaryotes, only one genome is included per organism. For other organisms, however, multiple genomes from diverse isolates of the same organism (such as E. coli) may be included.
 - **kraken**: Databases formatted for use with kraken/Bracken, Kraken2, krakenUniq taxonomic Sequence Classifiers. Each database is built for 50, 75, 100, 150, 200, 250 and 300-mers.
     - 'Standard': Contains Refseq archaea, bacteria, viral, plasmid, human (not masked), and UniVec_Core.
+    - 'plusPF': The standard kraken2 database, plus Refseq protozoa & fungi.
 - **Taxdump**: A structured, downloadable archive that provides the comprehensive taxonomic classification for all organisms in NCBI's database.
 
 ## Request a database
