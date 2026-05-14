@@ -8,31 +8,31 @@ This repository contains information pertaining to the communally-available data
 ### [NCBI BLAST](https://ftp.ncbi.nlm.nih.gov/blast/db/)
 | Database | Timestamp | Path | Size |
 | --- | --- | --- | --- |
-| core_nt  | 13-05-2026 | /hpc/groups/database/BLAST/core_nt_{timestamp} | 283GB |
-| mito | 14-05-2026 | /hpc/groups/database/BLAST/mito_{timestamp} | 420MB |
-| RefSeq representative Eukaryote Genomes | 14-05-2026 | /hpc/groups/database/BLAST/ref_euk_rep_genomes_{timestamp} | **TBC** |
-| MIDORI2 unique CO1 | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_CO1 | 698MB |
-| MIDORI2 unique A6 (ATP6) | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_A6 | 29.4MB |
-| MIDORI2 unique A8 (ATP8) | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_A8 | 12.4MB |
-| MIDORI2 unique lrRNA (16S) | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_lrRNA | 157MB |
-| MIDORI2 unique srRNA (12S) | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_srRNA | 74MB |
-| MIDORI2 unique ND1 | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_ND1 | 40.9MB |
+| core_nt  | 13-05-2026 | /hpc/groups/database/BLAST/core_nt_{timestamp}/ | 283GB |
+| mito | 14-05-2026 | /hpc/groups/database/BLAST/mito_{timestamp}/ | 420MB |
+| RefSeq representative Eukaryote Genomes | 14-05-2026 | /hpc/groups/database/BLAST/ref_euk_rep_genomes_{timestamp}/ | **TBC** |
+| MIDORI2 unique CO1 | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_CO1/ | 698MB |
+| MIDORI2 unique A6 (ATP6) | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_A6/ | 29.4MB |
+| MIDORI2 unique A8 (ATP8) | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_A8/ | 12.4MB |
+| MIDORI2 unique lrRNA (16S) | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_lrRNA/ | 157MB |
+| MIDORI2 unique srRNA (12S) | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_srRNA/ | 74MB |
+| MIDORI2 unique ND1 | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_ND1/ | 40.9MB |
 
 
 ### [Kraken](https://benlangmead.github.io/aws-indexes/)
 | Database | Timestamp | Path | Size |
 | --- | --- | --- | --- |
-| Kraken2 Standard | 14-05-2026 | /hpc/groups/database/kraken/k2_standard_{release} | 97.3GB |
-| Kraken2 plusPF | 14-05-2026 | /hpc/groups/database/kraken/k2_pluspf_{release} | **TBC** |
+| Kraken2 Standard | 14-05-2026 | /hpc/groups/database/kraken/k2_standard_{release}.tar.gz | **TBC GB** |
+| Kraken2 plusPF | 14-05-2026 | /hpc/groups/database/kraken/k2_pluspf_{release}.tar.gz | 79.7GB |
 
 
 ### [NCBI Taxonomy 'dump'](https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/)
 | Database | Timestamp | Path | Size |
 | --- | --- | --- | --- |
-| taxdump | 14-05-2026 | /hpc/groups/database/taxdump_{timestamp} | 513MB |
+| taxdump | 14-05-2026 | /hpc/groups/database/taxdump_{timestamp}.tar.gz | 71MB |
 
 > - Timestamp = download date
-> - Size (GB) = uncompressed
+> - Size (GB) = uncompressed (if Path = a directory), or compressed (if Path = a `.tar.gz` archive)
 
 ---
 
@@ -54,3 +54,37 @@ This repository contains information pertaining to the communally-available data
 If you would like us to install a new database, or update an existing one to a new version, please get in touch with us at DNASeqFac@nhm.ac.uk
 
 > Created 13-05-2026 by Dan Parsons.
+
+
+## Decompression
+You can decompress `.tar.gz` archives using the commands below. However, before you do please check whether the tool you're running can accept `.tar.gz` archives directly (as some can!).
+
+To decompress the archive into a specified directory, run:
+```
+tar -xzvf {archive}.tar.gz -C /path/to/destination/{archive}/
+
+-x: extract
+-v: verbose (prints each file as it's extracted)
+-f: filename follows
+-C: extract to this directory (destination must already exist)
+```
+
+To first identify what is contained within a `.tar.gz` archive, and then decompress a specific file or directory from it, run:
+```
+tar -tzf {archive}.tar.gz          # find the path you want
+tar -xzf {archive}.tar.gz path/to/found/{file.ext}   # extract just that file or directory
+
+-t: list contents without extraction
+-z: decompress with gzip
+-f: filename follows
+-z: decompress with gzip
+```
+
+To recompress back into a `.tar.gz` archive, run:
+```
+tar -czf {name_of_directory}.tar.gz> {name_of_directory}/
+
+c: create a new archive
+z: compress with gzip
+f: filename follows
+```
