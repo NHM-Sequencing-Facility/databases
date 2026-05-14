@@ -43,8 +43,10 @@ This repository contains information pertaining to the communally-available data
     - 'unique': One sequence per species (unique haplotypes deduplicated to one per taxon).
     - 'total': All sequences retained, no deduplication.
     - 'raw': Unformatted FASTA with full taxonomy.
-- **RefSeq representative Eukaryote Genomes**: contains Reference genomes selected from the NCBI Refseq Genomes database. As a result, the genomes in this database are among the best quality genomes available at NCBI. It is also constructed with minimum redundancy in genome representation. For the eukaryotes, only one genome is included per organism. For other organisms, however, multiple genomes from diverse isolates of the same organism (such as E. coli) may be included.
+- **RefSeq representative Eukaryote Genomes**: Contains Reference genomes selected from the NCBI Refseq Genomes database. As a result, the genomes in this database are among the best quality genomes available at NCBI. It is also constructed with minimum redundancy in genome representation. For the eukaryotes, only one genome is included per organism. For other organisms, however, multiple genomes from diverse isolates of the same organism (such as E. coli) may be included.
 - **Taxdump**: A structured, downloadable archive that provides the comprehensive taxonomic classification for all organisms in NCBI's database.
 
 ## Request a database
 If you would like us to install a new database, or update an existing one to a new version, please get in touch with us at DNASeqFac@nhm.ac.uk
+
+> Created 13-05-2026 by Dan Parsons.
