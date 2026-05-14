@@ -1,5 +1,5 @@
 # Databases
-This repository contains information pertaining to the communally-availble databases present within `/hpc/groups/database` on the NHM HPC. All users will have read and execute privileges on all databases in the directory.
+This repository contains information pertaining to the communally-available databases present within `/hpc/groups/database` on the NHM HPC. All users will have read and execute privileges on all databases in the directory.
 
 ---
 
