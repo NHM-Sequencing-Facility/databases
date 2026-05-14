@@ -19,16 +19,16 @@ This repository contains information pertaining to the communally-available data
 | MIDORI2 unique ND1 | 14-05-2026 | /hpc/groups/database/MIDORI/MIDORI2_UNIQ_NUC_{release}_ND1 | 40.9MB |
 
 
-### [Kraken2](https://benlangmead.github.io/aws-indexes/k2)
+### [Kraken](https://benlangmead.github.io/aws-indexes/)
 | Database | Timestamp | Path | Size |
 | --- | --- | --- | --- |
-| Standard (Refseq archaea, bacteria, viral, plasmid, human (not masked), UniVec_Core) | 14-05-2026 | /hpc/groups/database/kraken/k2_standard_{release} | **TBC** |
+| Kraken2 Standard | 14-05-2026 | /hpc/groups/database/kraken/k2_standard_{release} | 97.3GB |
 
 
 ### [NCBI Taxonomy 'dump'](https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/)
 | Database | Timestamp | Path | Size |
 | --- | --- | --- | --- |
-| taxdump | 14-05-2026 | /hpc/groups/database/taxdump_20260514 | 513MB |
+| taxdump | 14-05-2026 | /hpc/groups/database/taxdump_{timestamp} | 513MB |
 
 > - Timestamp = download date
 > - Size (GB) = uncompressed
@@ -44,6 +44,8 @@ This repository contains information pertaining to the communally-available data
     - 'total': All sequences retained, no deduplication.
     - 'raw': Unformatted FASTA with full taxonomy.
 - **RefSeq representative Eukaryote Genomes**: Contains Reference genomes selected from the NCBI Refseq Genomes database. As a result, the genomes in this database are among the best quality genomes available at NCBI. It is also constructed with minimum redundancy in genome representation. For the eukaryotes, only one genome is included per organism. For other organisms, however, multiple genomes from diverse isolates of the same organism (such as E. coli) may be included.
+- **kraken**: Databases formatted for use with kraken/Bracken, Kraken2, krakenUniq taxonomic Sequence Classifiers. Each database is built for 50, 75, 100, 150, 200, 250 and 300-mers.
+    - 'Standard': Contains Refseq archaea, bacteria, viral, plasmid, human (not masked), and UniVec_Core.
 - **Taxdump**: A structured, downloadable archive that provides the comprehensive taxonomic classification for all organisms in NCBI's database.
 
 ## Request a database
