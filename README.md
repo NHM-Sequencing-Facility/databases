@@ -26,7 +26,7 @@ This repository contains information pertaining to the communally-available data
 ### [Kraken](https://benlangmead.github.io/aws-indexes/)
 | Database | Timestamp | Path | Size |
 | --- | --- | --- | --- |
-| Kraken2 Standard | 14-05-2026 | `kraken/k2_standard_{release}.tar.gz` | **TBC** |
+| Kraken2 Standard | 14-05-2026 | `kraken/k2_standard_{release}.tar.gz` | 74.7GB |
 | Kraken2 plusPF | 14-05-2026 | `kraken/k2_pluspf_{release}.tar.gz` | 79.7GB |
 
 ### [NCBI Taxonomy 'dump'](https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/)
