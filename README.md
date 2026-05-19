@@ -8,14 +8,14 @@ This repository contains information pertaining to the communally-available data
 ## Available databases
 > - **Base path:** `/hpc/groups/database/`
 > - Timestamp = download date
-> - Size (GB) = uncompressed (if Path = a directory), or compressed (if Path = a `.tar.gz` archive)
+> - Size (GB) = uncompressed
 
 ### [NCBI BLAST](https://ftp.ncbi.nlm.nih.gov/blast/db/)
 | Database | Timestamp | Path | Size |
 | --- | --- | --- | --- |
 | core_nt | 13-05-2026 | `BLAST/core_nt_{timestamp}/` | 283GB |
 | mito | 14-05-2026 | `BLAST/mito_{timestamp}/` | 420MB |
-| RefSeq representative Eukaryote Genomes | 14-05-2026 | `BLAST/ref_euk_rep_genomes_{timestamp}/` | **TBC** |
+| RefSeq representative Eukaryote Genomes | 14-05-2026 | `BLAST/ref_euk_rep_genomes_{timestamp}/` | 452GB |
 | MIDORI2 unique CO1 | 14-05-2026 | `MIDORI/MIDORI2_UNIQ_NUC_{release}_CO1/` | 698MB |
 | MIDORI2 unique A6 (ATP6) | 14-05-2026 | `MIDORI/MIDORI2_UNIQ_NUC_{release}_A6/` | 29.4MB |
 | MIDORI2 unique A8 (ATP8) | 14-05-2026 | `MIDORI/MIDORI2_UNIQ_NUC_{release}_A8/` | 12.4MB |
@@ -26,13 +26,13 @@ This repository contains information pertaining to the communally-available data
 ### [Kraken](https://benlangmead.github.io/aws-indexes/)
 | Database | Timestamp | Path | Size |
 | --- | --- | --- | --- |
-| Kraken2 Standard | 14-05-2026 | `kraken/k2_standard_{release}.tar.gz` | 74.7GB |
-| Kraken2 plusPF | 14-05-2026 | `kraken/k2_pluspf_{release}.tar.gz` | 79.7GB |
+| Kraken2 Standard | 14-05-2026 | `kraken/k2_standard_{release}/` | 97.3GB |
+| Kraken2 plusPF | 14-05-2026 | `kraken/k2_pluspf_{release}/` | **TBC** GB |
 
 ### [NCBI Taxonomy 'dump'](https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/)
 | Database | Timestamp | Path | Size |
 | --- | --- | --- | --- |
-| taxdump | 14-05-2026 | `ncbi_taxdump/taxdump_{timestamp}.tar.gz` | 71MB |
+| taxdump | 14-05-2026 | `ncbi_taxdump/taxdump_{timestamp}/` | 513MB |
 
 
 ---
